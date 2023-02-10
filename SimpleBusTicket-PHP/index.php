@@ -215,7 +215,6 @@
             </div>
         </nav>
     </header>
-    <!-- Login Modal -->
     <?php require 'assets/partials/_loginModal.php'; 
         require 'assets/partials/_getJSON.php';
 

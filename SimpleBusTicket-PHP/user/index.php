@@ -211,12 +211,11 @@
             </ul>
             <div>
                 <a href="#" class="login nav-item" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fas fa-sign-in-alt" style="margin-right: 0.4rem;"></i>Login</a>
-                <a href="assets/partials/_signup.php" class="login nav-item"><i class="fas fa-sign-in-alt" style="margin-right: 0.4rem;"></i>Sign-UP</a>
+                <a href="assets/partials/_signup.php"><i class="fas fa-sign-in-alt" style="margin-right: 0.4rem;"></i>Signup</a>
                 <a href="#pnr-enquiry" class="pnr nav-item">PNR Enquiry</a>
             </div>
         </nav>
     </header>
-    <!-- Login Modal -->
     <?php require 'assets/partials/_loginModal.php'; 
         require 'assets/partials/_getJSON.php';
 
@@ -231,6 +230,11 @@
             <h1>Simple Bus Ticket Booking System</h1>
 
             <p class="text-center">Welcome to Simple Bus Ticket Booking System. Login now to manage bus tickets and much more. OR, simply scroll down to check the Ticket status using Passenger Name Record (PNR number)</p>
+
+            <!-- <center>
+                <button class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#loginModal">Administrator Login</button>
+                
+            </center> -->
 
             <br>
             <center>

@@ -1,6 +1,6 @@
 <?php
     // Route JSON
-    $rtSql = "Select * from routes";
+    $rtSql = "Select bus_no, route_cities from routes";
     $resultrtSql = mysqli_query($conn, $rtSql);
     $arr = array();
     if(mysqli_num_rows($resultrtSql))
@@ -8,7 +8,7 @@
             $arr[] = $row;
         $routeJson = json_encode($arr);
     
-    // Customer JSON
+    // // Customer JSON
     $ctSql = "Select * from customers";
     $resultctSql = mysqli_query($conn, $ctSql);
     $arr = array();
@@ -17,38 +17,38 @@
             $arr[] = $row;
     $customerJson = json_encode($arr);
     
-    // Seats JSON
-    $stSql = "Select * from seats";
-    $resultstSql = mysqli_query($conn, $stSql);
-    $arr = array();
-    if(mysqli_num_rows($resultstSql))
-        while($row = mysqli_fetch_assoc($resultstSql))
-            $arr[] = $row;
-    $seatJson = json_encode($arr);
+    // // Seats JSON
+    // $stSql = "Select * from seats";
+    // $resultstSql = mysqli_query($conn, $stSql);
+    // $arr = array();
+    // if(mysqli_num_rows($resultstSql))
+    //     while($row = mysqli_fetch_assoc($resultstSql))
+    //         $arr[] = $row;
+    // $seatJson = json_encode($arr);
 
-    // Bus JSON
-    $busSql = "Select * from buses";
+    // // Bus JSON
+    $busSql = "Select bus_no from buses";
     $resultBusSql = mysqli_query($conn, $busSql);
     $arr = array();
     while($row = mysqli_fetch_assoc($resultBusSql))
         $arr[] = $row;
     $busJson = json_encode($arr);
 
-    // Booking JSON
-    $bookingSql = "Select * from bookings";
-    $resultBookingSql = mysqli_query($conn, $bookingSql);
-    $arr = array();
-    while($row = mysqli_fetch_assoc($resultBookingSql))
-        $arr[] = $row;
-    $bookingJson = json_encode($arr);
+    // // Booking JSON
+    // $bookingSql = "Select * from bookings";
+    // $resultBookingSql = mysqli_query($conn, $bookingSql);
+    // $arr = array();
+    // while($row = mysqli_fetch_assoc($resultBookingSql))
+    //     $arr[] = $row;
+    // $bookingJson = json_encode($arr);
         
-    // Admin JSON
-    $adminSql = "SELECT * from users";
-    $resultAdminSql = mysqli_query($conn, $adminSql);
-    $arr = array();
-    while($row = mysqli_fetch_assoc($resultAdminSql))
-        $arr[] = $row;
-    $adminJson = json_encode($arr);
+    // // Admin JSON
+    // $adminSql = "SELECT * from users";
+    // $resultAdminSql = mysqli_query($conn, $adminSql);
+    // $arr = array();
+    // while($row = mysqli_fetch_assoc($resultAdminSql))
+    //     $arr[] = $row;
+    // $adminJson = json_encode($arr);
 
     //Earning JSON
     // $result = mysqli_query($conn, 'SELECT SUM(booked_amount) AS value_sum FROM bookings'); 
