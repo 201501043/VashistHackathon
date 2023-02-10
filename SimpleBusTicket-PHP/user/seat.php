@@ -47,6 +47,25 @@
                 </div>
                 <div id="main">
                 <div id="bus-seat-map"></div>
+                <input type="submit" value="Book" id="submit-button" name="subit"/>
+                <script>
+                    $('#submit-button').click(function () {
+                        var selectedSeats = [];
+                        $.each($('#seat-chart').find('.seatCharts-seat.selected'), function () {
+                            selectedSeats.push($(this).attr('id'));
+                        });
+                        $.ajax({
+                            type: 'POST',
+                            url: 'afterseat.php',
+                            data: { seats: selectedSeats },
+                            success: function (response) {
+                            // handle the response from the server
+                            // ...
+                                window.location.href="https://localhost/CollegeBus/VashistHackathon/SimpleBusTicket-PHP/user/dashboard.php"
+                            }
+                        });
+                    });
+                </script>
                 <!-- data-seats="<?php echo $booked_seats; ?>" -->
                 
                     <!-- <div id="seat-results">
