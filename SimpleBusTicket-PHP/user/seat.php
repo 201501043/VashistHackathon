@@ -51,9 +51,10 @@
                 <script>
                     $('#submit-button').click(function () {
                         var selectedSeats = [];
-                        $.each($('#seat-chart').find('.seatCharts-seat.selected'), function () {
+                        $.each($('#bus-seat-map').find('.seatCharts-seat.selected'), function () {
                             selectedSeats.push($(this).attr('id'));
                         });
+                        console.log(selectedSeats);
                         $.ajax({
                             type: 'POST',
                             url: 'afterseat.php',
@@ -61,7 +62,8 @@
                             success: function (response) {
                             // handle the response from the server
                             // ...
-                                window.location.href="https://localhost/CollegeBus/VashistHackathon/SimpleBusTicket-PHP/user/dashboard.php"
+                                console.log(response.blablabla);
+                                // window.location.href="https://localhost/CollegeBus/VashistHackathon/SimpleBusTicket-PHP/user/seat.php"
                             }
                         });
                     });
